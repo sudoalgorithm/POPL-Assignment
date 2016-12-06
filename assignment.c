@@ -7,12 +7,12 @@
 #include <unistd.h>   // contains calls like fork(0 wait() etc
 #include <time.h>
 
-#define MAX_ELEMENTS 16
+#define MAX_ELEMENTS 100
 int A[MAX_ELEMENTS], B[MAX_ELEMENTS];
 int *C;
 //shared Memory(across parent and child)
 int shmKey = 1234;
-main()
+int main()
 {
 	int pid0, pid1, pid2, pid3;
 	int a, b, c, d;
