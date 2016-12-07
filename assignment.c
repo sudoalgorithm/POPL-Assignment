@@ -7,7 +7,7 @@
 #include <unistd.h>   // contains calls like fork(0 wait() etc
 #include <time.h>
 
-#define MAX_ELEMENTS 100
+#define MAX_ELEMENTS 16
 int A[MAX_ELEMENTS], B[MAX_ELEMENTS];
 int *C;
 //shared Memory(across parent and child)
@@ -77,13 +77,13 @@ int main()
 
 	// FILL IN: Parent print arrays A[], B[], C[]
 	for(j=0; j<MAX_ELEMENTS; j++){
-		printf("A[%d] = %d\n",j,A[j]);
+		printf("A[%d] = %d\t",j,A[j]);
 	}
 	for(k=0; k<MAX_ELEMENTS; k++){
-		printf("B[%d] = %d\n",k,B[k]);
+		printf("B[%d] = %d\t",k,B[k]);
 	}
 	for(l=0; l<MAX_ELEMENTS; l++){
-		printf("C[%d] = %d\n",l,C[l]);
+		printf("C[%d] = %d\t",l,C[l]);
 	}
 
 	// check if C[i] = A[i] + B[i] for all i
